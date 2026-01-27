@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Ecosystem</title>
+    <link rel="stylesheet" href="/frontend/styles/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PROTOCOL.</div>
+        <div>
+            <span id="statusDot" class="status-dot offline"></span>
+            <button id="connectBtn">Connect Wallet</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Financial Dashboard</h1>
+        <div id="account">Not connected</div>
+
+        <div class="dashboard-grid">
+            <!-- ERC-20 MODULE -->
+            <div class="card">
+                <div class="card-label">Asset Balance</div>
+                <div id="tokenBalance" class="balance-value">0.00</div>
+                <div class="token-info">
+                    <span id="tokenName">Select Wallet</span> • <span id="tokenSymbol">---</span>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <div class="card-label" style="margin-bottom: 16px;">Transfer</div>
+                    <input id="transferAddress" type="text" placeholder="Recipient address">
+                    <input id="transferAmount" type="number" placeholder="0.00">
+                    <button id="transferBtn">Execute Transfer</button>
+                    <p id="txStatus" style="font-size: 0.7rem; color: #666; margin-top: 12px;"></p>
+                </div>
+            </div>
+
+            <!-- NFT MODULE -->
+            <div class="card">
+                <div class="card-label">Collected NFTs</div>
+                <div id="nftList" class="nft-grid">
+                    <div class="nft-item">Empty</div>
+                    <div class="nft-item">Empty</div>
+                    <div class="nft-item">Empty</div>
+                    <div class="nft-item">Empty</div>
+                </div>
+                
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border);">
+                    <div class="card-label">Contract Protocol</div>
+                    <button id="readMessageBtn" style="background: transparent; color: white; border: 1px solid var(--border);">
+                        Fetch Message
+                    </button>
+                    <p id="contractMsg" style="text-align: center; margin-top: 16px; font-size: 0.9rem;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+    <script src="/frontend/js/abi.js"></script>
+    <script src="/frontend/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #050505;
+    --card-bg: #0a0a0a;
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #ffffff;
+    --secondary: #666666;
+    --glow: rgba(120, 119, 198, 0.15);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Фоновое свечение как на Trynia */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% -20%, var(--glow), transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 1.25rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    transition: border 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-label {
+    color: var(--secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.balance-value {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    margin-bottom: 4px;
+}
+
+.token-info {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+input {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: white;
+    padding: 14px 18px;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: white;
+}
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button#connectBtn {
+    width: auto;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid var(--border);
+}
+
+button#connectBtn:hover {
+    background: white;
+    color: black;
+}
+
+.nft-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.nft-item {
+    aspect-ratio: 1/1;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-size: 0.8rem;
+}
+
+#account {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    font-family: monospace;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.online { background: #00ff00; box-shadow: 0 0 10px #00ff00; }
+.offline { background: #ff0000; }
