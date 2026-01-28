@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assignment 4 dApp</title>
+  <!-- ethers.js -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <h1>Assignment 4 – dApp</h1>
+
+  <button id="connectBtn">Connect MetaMask</button>
+  <button id="changeBtn" disabled>Change Account</button>
+  <button id="disconnectBtn">Disconnect</button>
+
+  <p id="account">Not connected</p>
+
+  <hr />
+
+  <h2>ERC-20 Token</h2>
+
+  <p id="tokenInfo">Token: -</p>
+  <p id="balance">Balance: -</p>
+
+  <button id="refreshBalanceBtn" disabled>Refresh Balance</button>
+
+  <input id="to" placeholder="Recipient address" />
+  <input id="amount" placeholder="Amount" />
+  <button id="sendBtn" disabled>Send Tokens</button>
+  <p id="txHash"></p>
+
+  <hr />
+
+  <h2>ERC-721 NFTs</h2>
+  <button id="refreshNFTsBtn" disabled>Refresh NFTs</button>
+  <ul id="nftList"></ul>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

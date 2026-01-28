@@ -1,0 +1,132 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+body > * {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin: 25px 0 10px;
+  font-size: 1.2rem;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+button {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 6px 6px 6px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #1e293b;
+  margin: 25px 0;
+}
+
+#tokenInfo,
+#balance {
+  font-weight: 600;
+  color: #e0f2fe;
+}
+
+#txHash {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  word-break: break-all;
+  color: #38bdf8;
+}
+
+#nftList {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#nftList li {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+#account {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #a5f3fc;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
